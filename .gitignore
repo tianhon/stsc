@@ -1,6 +1,11 @@
 /*
+
 !/UI2
 /UI2/*
+
 !/UI2/STSC
+/UI2/STSC/.cache/*
+/UI2/STSC/.release/*
+
 !*.gitignore
 !*.md
