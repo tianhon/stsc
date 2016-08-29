@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" xid="window" design="device:mobile" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cMVZfE3" class="cMVZfE3" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/output/output,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/labelEdit/labelEdit,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.cMVZfE3{background-color: rgb(237, 72, 70)} .text-black.cMVZfE3{color: rgb(33, 33, 33)}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cMVZfE3" class="cMVZfE3"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar cMVZfE3" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cMVZfE3"> 
+    <div class="x-panel-top cMVZfE3" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cMVZfE3"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cMVZfE3" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;联系我们&quot;}" __cid="cMVZfE3"> 
+        <div class="x-titlebar-left cMVZfE3" __cid="cMVZfE3"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cMVZfE3" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:backBtnClick" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cMVZfE3"> 
+            <i class="icon-chevron-left cMVZfE3" __cid="cMVZfE3"/>  
+            <span __cid="cMVZfE3" class="cMVZfE3"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cMVZfE3" __cid="cMVZfE3">联系我们</div>  
+        <div class="x-titlebar-right  cMVZfE3" __cid="cMVZfE3"> 
+          <div class="empty cMVZfE3" __cid="cMVZfE3"/> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content panel-body cMVZfE3" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cMVZfE3"> 
+      <h4 xid="h42" class="text-black cMVZfE3" __cid="cMVZfE3" data-bind="text:data.ref('companyName')"/>  
+      <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label15 cMVZfE3" xid="labelOutput1" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cMVZfE3"> 
+        <label class="x-label cMVZfE3" xid="label1" __cid="cMVZfE3" data-bind="text:data.label('address')"/>  
+        <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit cMVZfE3" xid="output2" data-bind="component:{ref:data.ref('address'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cMVZfE3"/> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label15 cMVZfE3" xid="labelOutput2" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cMVZfE3"> 
+        <label class="x-label cMVZfE3" xid="label2" __cid="cMVZfE3" data-bind="text:data.label('tel')"/>  
+        <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit cMVZfE3" xid="output3" data-bind="component:{ref:data.ref('tel'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cMVZfE3"/> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label15 cMVZfE3" xid="labelOutput3" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cMVZfE3"> 
+        <label class="x-label cMVZfE3" xid="label3" __cid="cMVZfE3" data-bind="text:data.label('postalCode')"/>  
+        <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit cMVZfE3" xid="output4" data-bind="component:{ref:data.ref('postalCode'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cMVZfE3"/> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label15 cMVZfE3" xid="labelOutput4" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cMVZfE3"> 
+        <label class="x-label cMVZfE3" xid="label4" __cid="cMVZfE3" data-bind="text:data.label('website')"/>  
+        <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit cMVZfE3" xid="output5" data-bind="component:{ref:data.ref('website'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cMVZfE3"/> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label15 cMVZfE3" xid="labelOutput5" data-bind="component:{name:'$model/UI2/system/components/justep/labelEdit/labelEdit'}" __cid="cMVZfE3"> 
+        <label class="x-label cMVZfE3" xid="label5" __cid="cMVZfE3" data-bind="text:data.label('email')"/>  
+        <div component="$model/UI2/system/components/justep/output/output" class="x-output x-edit cMVZfE3" xid="output6" data-bind="component:{ref:data.ref('email'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cMVZfE3"/> 
+      </div> 
+    </div>  
+    <style __cid="cMVZfE3" class="cMVZfE3">.x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.p1d33961fed424d488d6f4e69c60c9f6a-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

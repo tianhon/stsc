@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" class="main13 cVN3uim" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cVN3uim" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/bootstrap/row/row,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/windowContainer/windowContainer,$model/UI2/system/components/bootstrap/carousel/carousel,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/button/buttonGroup,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.text-white.cVN3uim{color: rgb(255, 255, 255)} .bg-red.cVN3uim{background-color: rgb(55, 171, 64)} .x-imgBanner.cVN3uim{width: 100%; height: 150px} .x-img1.cVN3uim{width: 100%; height: 90px} .x-img2.cVN3uim{width: 100%; height: 90px} .x-img3.cVN3uim{width: 26px; height: 24px} .btn.cVN3uim i.cVN3uim{font-size: 20px} .btn.cVN3uim span.cVN3uim{font-size: 12px; font-weight: normal} .x-titlebar.cVN3uim{background-color: rgb(55, 171, 64)} .x-panel-bottom.cVN3uim .btn-group.cVN3uim .btn.active.cVN3uim{color: rgb(237, 72, 70); padding: 0} .x-panel-bottom.cVN3uim .btn-group.cVN3uim{background-color: rgb(255, 255, 255)} .x-cards.cVN3uim{padding-top: 0} .row.cVN3uim{margin: 5px 10px} .row.cVN3uim .col.cVN3uim{padding: 0} .x-menu.row.cVN3uim .col.cVN3uim:nth-child(2){padding: 0 3px} .x-menu.row.cVN3uim .col.cVN3uim &gt; div.cVN3uim{padding: 8px 0 3px 0} .x-pic.row.cVN3uim .col.cVN3uim{padding: 1px} .x-recommended.cVN3uim .col.cVN3uim{position: relative; margin-bottom: 0px} .x-recommended.cVN3uim .col.cVN3uim &gt; div.cVN3uim{width: 100%; position: absolute; bottom: 40px; left: 0; z-index: 33; background-color: rgba(0, 0, 0, 0.4)} .x-recommended.cVN3uim .col.cVN3uim &gt; div.cVN3uim span.cVN3uim{padding: 5px} .x-recommended.cVN3uim .col.cVN3uim &gt; div.cVN3uim span.cVN3uim:nth-child(2){height: 0px; margin: 7px 0; border-right: 1px solid rgb(255, 255, 255)}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cVN3uim" class="cVN3uim"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar cVN3uim" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cVN3uim"> 
+    <div class="x-panel-top cVN3uim" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cVN3uim"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cVN3uim" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;生态商城&quot;}" __cid="cVN3uim"> 
+        <div class="x-titlebar-left cVN3uim" xid="div1" __cid="cVN3uim"/>  
+        <div class="x-titlebar-title cVN3uim" xid="div2" __cid="cVN3uim">生态商城</div>  
+        <div class="x-titlebar-right  cVN3uim" xid="div3" __cid="cVN3uim">
+          <div class="empty cVN3uim" __cid="cVN3uim"/>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content x-bg-img cVN3uim" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cVN3uim"> 
+      <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cVN3uim" xid="contents2" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0}" __cid="cVN3uim"> 
+        <div class="x-contents-content active cVN3uim" xid="homeContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cVN3uim"> 
+          <div component="$model/UI2/system/components/bootstrap/carousel/carousel" class="x-carousel carousel cVN3uim" xid="carousel1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/carousel/carousel'}" data-config="{&quot;auto&quot;:true}" __cid="cVN3uim"> 
+            <ol class="carousel-indicators cVN3uim" xid="ol1" __cid="cVN3uim"/>  
+            <div class="x-contents carousel-inner cVN3uim" role="listbox" component="$model/UI2/system/components/justep/contents/contents" xid="contentsImg" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0,&quot;slidable&quot;:true,&quot;swipe&quot;:true,&quot;wrap&quot;:true}" __cid="cVN3uim"> 
+              <div class="x-contents-content active cVN3uim" xid="content1" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cVN3uim"> 
+                <img class="image-wall x-imgBanner cVN3uim" bind-attr-src="$model.getImageUrl('./img/banner1.jpg')" __cid="cVN3uim"/> 
+              </div> 
+            </div> 
+          </div>  
+          <div component="$model/UI2/system/components/bootstrap/row/row" class="row x-menu cVN3uim" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cVN3uim"> 
+            <div class="col col-xs-4 cVN3uim" xid="col14" __cid="cVN3uim"> 
+              <div class="text-center bg-red cVN3uim" bind-click="openPageClick" pagename="promotion" __cid="cVN3uim"> 
+                <h5 class="text-white cVN3uim" __cid="cVN3uim">签到</h5> 
+              </div> 
+            </div>  
+            <div class="col col-xs-4 cVN3uim" xid="col15" __cid="cVN3uim"> 
+              <div class="text-center bg-red cVN3uim" xid="div5" bind-click="openPageClick" pagename="dynamic" __cid="cVN3uim"> 
+                <h5 class="text-white cVN3uim" xid="h511" __cid="cVN3uim">活动</h5> 
+              </div> 
+            </div>  
+            <div class="col col-xs-4 cVN3uim" xid="col16" __cid="cVN3uim"> 
+              <div class="text-center bg-red cVN3uim" xid="div6" bind-click="openPageClick" pagename="contactUs" __cid="cVN3uim"> 
+                <h5 class="text-white cVN3uim" xid="h512" __cid="cVN3uim">百科</h5> 
+              </div> 
+            </div> 
+          </div>  
+          <div component="$model/UI2/system/components/bootstrap/row/row" class="row x-recommended cVN3uim" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cVN3uim"> 
+            <div class="col col-xs-12 cVN3uim" bind-click="storeDetailedClick" __cid="cVN3uim"> 
+              <div __cid="cVN3uim" class="cVN3uim"> 
+                <span class="text-white x-flex pull-left cVN3uim" __cid="cVN3uim">推荐商品</span>  
+                <span class="x-flex pull-left cVN3uim" __cid="cVN3uim"/>  
+                <span class="text-white x-flex pull-left cVN3uim" __cid="cVN3uim">舌尖上的湘味</span> 
+              </div>  
+              <img class="x-img1 cVN3uim" bind-attr-src="$model.getImageUrl('./img/rec2.jpg')" xid="image2" __cid="cVN3uim"/>
+            </div> 
+          </div>  
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list cVN3uim" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;recommendData&quot;}" __cid="cVN3uim"> 
+            <ul class="x-list-template hide cVN3uim" xid="listTemplateUl1" bind-foreach="{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" __cid="cVN3uim"> 
+              <li xid="li1" __cid="cVN3uim" class="cVN3uim">
+                <div component="$model/UI2/system/components/bootstrap/row/row" class="row x-recommended cVN3uim" xid="row2" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cVN3uim"> 
+                  <div class="col col-xs-12 cVN3uim" xid="col4" __cid="cVN3uim"> 
+                    <div xid="div4" __cid="cVN3uim" class="cVN3uim">
+                      <span xid="span6" class="pull-left text-white x-flex cVN3uim" bind-text="&quot;￥&quot; + val(&quot;Price&quot;)" __cid="cVN3uim">推荐商品</span>  
+                      <span xid="span7" class="pull-left x-flex cVN3uim" __cid="cVN3uim"/>  
+                      <span xid="span8" class="x-flex pull-left text-white cVN3uim" bind-text="val(&quot;Type&quot;)" __cid="cVN3uim"/>
+                    </div>
+                    <img src="" alt="" xid="image3" bind-attr-src=" val(&quot;imgUrl&quot;)" class="x-img1 cVN3uim" __cid="cVN3uim"/>
+                  </div> 
+                </div> 
+              </li>
+            </ul> 
+          </div>  
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list cVN3uim" xid="list3" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;goodsData&quot;}" __cid="cVN3uim"> 
+            <ul class="x-list-template hide cVN3uim" xid="listTemplateUl3" bind-foreach="{data:$model.foreach_list3($element),afterRender:$model.foreach_afterRender_list3.bind($model,$element)}" __cid="cVN3uim"> 
+              <li xid="li3" class="col-xs-6 cVN3uim" style="background-color:rgb(247,247,247);" __cid="cVN3uim"> 
+                <div component="$model/UI2/system/components/bootstrap/row/row" class="row x-recommended cVN3uim" xid="row6" data-bind="component:{name:'$model/UI2/system/components/bootstrap/row/row'}" __cid="cVN3uim"> 
+                  <div class="col col-xs-12 cVN3uim" xid="col13" __cid="cVN3uim"> 
+                    <div xid="div7" __cid="cVN3uim" class="cVN3uim"> 
+                      <span xid="span13" class="pull-left text-white x-flex cVN3uim" bind-text="val(&quot;title&quot;)" __cid="cVN3uim"></span> 
+                    </div>  
+                    <img src="" alt="" xid="image1" bind-attr-src=" val(&quot;imgUrl&quot;)" class="img-rounded img-responsive media-object cVN3uim" __cid="cVN3uim"/>  
+                    <span xid="span5" bind-text="'￥' + val(&quot;price&quot;)" class="text-danger cVN3uim" __cid="cVN3uim"/>  
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-sm btn-only-icon pull-right cVN3uim" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-ios7-cart&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cVN3uim"> 
+                      <i xid="i5" class="icon-ios7-cart cVN3uim" __cid="cVN3uim"/>  
+                      <span xid="span9" __cid="cVN3uim" class="cVN3uim"/> 
+                    </a> 
+                  </div> 
+                </div> 
+              </li>
+            </ul> 
+          </div>
+        </div>  
+        <div class="x-contents-content cVN3uim" xid="menuContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" data-events="onActive:menuContentActive" __cid="cVN3uim"> 
+          <div component="$model/UI2/system/components/justep/windowContainer/windowContainer" class="x-window-container cVN3uim" xid="menuContainer" style="height:100%;width:100%;" __component-context__="block" data-bind="component:{name:'$model/UI2/system/components/justep/windowContainer/windowContainer'}" __cid="cVN3uim"/> 
+        </div>  
+        <div class="x-contents-content cVN3uim" xid="storeContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" data-events="onActive:storeContentActive" __cid="cVN3uim"> 
+          <div component="$model/UI2/system/components/justep/windowContainer/windowContainer" class="x-window-container cVN3uim" xid="storeContainer" style="height:100%;width:100%;" __component-context__="block" data-bind="component:{name:'$model/UI2/system/components/justep/windowContainer/windowContainer'}" __cid="cVN3uim"/> 
+        </div>  
+        <div class="x-contents-content cVN3uim" xid="aboutContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" data-events="onActive:aboutContentActive" __cid="cVN3uim"> 
+          <div component="$model/UI2/system/components/justep/windowContainer/windowContainer" class="x-window-container cVN3uim" xid="aboutContainer" style="height:100%;width:100%;" __component-context__="block" data-bind="component:{name:'$model/UI2/system/components/justep/windowContainer/windowContainer'}" __cid="cVN3uim"/> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom cVN3uim" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cVN3uim"> 
+      <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified x-card cVN3uim" xid="buttonGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/button/buttonGroup'}" data-config="{&quot;tabbed&quot;:true}" __cid="cVN3uim"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-top active cVN3uim" xid="homeBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-home&quot;,&quot;label&quot;:&quot;首页&quot;,&quot;target&quot;:&quot;homeContent&quot;}" __cid="cVN3uim"> 
+          <i xid="i1" class="icon-home cVN3uim" __cid="cVN3uim"/>  
+          <span xid="span1" __cid="cVN3uim" class="cVN3uim">首页</span> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-top cVN3uim" xid="menuBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-grid&quot;,&quot;label&quot;:&quot;分类&quot;,&quot;target&quot;:&quot;menuContent&quot;}" __cid="cVN3uim"> 
+          <i xid="i2" class="icon-grid cVN3uim" __cid="cVN3uim"/>  
+          <span xid="span2" __cid="cVN3uim" class="cVN3uim">分类</span> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-top cVN3uim" xid="storeBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-ios7-cart&quot;,&quot;label&quot;:&quot;购物车&quot;,&quot;target&quot;:&quot;storeContent&quot;}" __cid="cVN3uim"> 
+          <i xid="i3" class="icon-ios7-cart cVN3uim" __cid="cVN3uim"/>  
+          <span xid="span3" __cid="cVN3uim" class="cVN3uim">购物车</span> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-icon-top cVN3uim" xid="aboutBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-ios7-person&quot;,&quot;label&quot;:&quot;我的&quot;,&quot;target&quot;:&quot;aboutContent&quot;}" __cid="cVN3uim"> 
+          <i xid="i4" class="icon-ios7-person cVN3uim" __cid="cVN3uim"/>  
+          <span xid="span4" __cid="cVN3uim" class="cVN3uim">我的</span> 
+        </a> 
+      </div> 
+    </div>  
+    <style __cid="cVN3uim" class="cVN3uim">.x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc207ed1c173f417d8567e51c45b0e2d8-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>
