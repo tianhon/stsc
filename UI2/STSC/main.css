@@ -1,5 +1,17 @@
+/* 修改了原来的样式 */
+.x-cards{padding-top:0;}
+.panel{ border:0;}
+.panel.panel-default{ margin-bottom:10px;}
+.row{ margin:0;}
+.row .col{ padding:0;}
 
+/* 压根就没有的样式 */
+.text-black{ color:#212121;}
 .text-white{ color:#fff;}
+
+/*内容*/
+.tb-twoColList.col-xs-6{ padding:5px;}
+
 .bg-red{ background-color:#37ab40;}/*红*/
 
 .x-imgBanner{ width:100%; height:150px;}
@@ -15,9 +27,6 @@
 .x-panel-bottom .btn-group .btn.active{ color:#ed4846; padding:0;}
 .x-panel-bottom .btn-group{ background-color:#fff;}
 
-.x-cards{ padding-top:0;}
-.row{ margin:5px 10px;}
-.row .col{ padding:0;}
 /*导航*/
 .x-menu.row .col:nth-child(2){ padding:0 3px;}
 .x-menu.row .col > div{ padding:8px 0 3px 0; }
@@ -25,11 +34,13 @@
 .x-pic.row .col{ padding:1px;}
 /*推荐*/
 .x-recommended .col{ position:relative; margin-bottom:0px;}
-.x-recommended .col>div{ width:100%;  position:absolute; bottom:40px; left:0; z-index:33; background-color:rgba(0,0,0,0.4);}
+.x-recommended .col>div{ width:100%;  position:absolute; bottom:0px; left:0; z-index:33; background-color:rgba(0,0,0,0.4);}
 .x-recommended .col>div span{ padding:5px;}
 .x-recommended .col>div span:nth-child(2){ height:0px; margin:7px 0; border-right:1px solid #fff;}
 
 
+.x-rr { width:100%; z-index:33; background-color:rgba(0,0,0,0.4);}
+.x-rr span{ padding:5px;}
 
 
 
