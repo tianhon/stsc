@@ -29,7 +29,12 @@
 .x-recommended .col>div span{ padding:5px;}
 .x-recommended .col>div span:nth-child(2){ height:0px; margin:7px 0; border-right:1px solid #fff;}
 
-
+.x-panel 
+{
+	position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+  	margin: auto;
+  	max-width:640px;   
+}
 
 
 
