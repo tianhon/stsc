@@ -45,5 +45,9 @@
   	max-width:640px;   
 }
 
-
+.x-scroll-view .x-pull-down, .x-scroll-view .x-pull-up
+{
+	margin: auto;
+	max-width:630px;
+}
 
