@@ -1,0 +1,7 @@
+[
+{"id":"1","fTitle":"五月田有机玉米","fImg":"img/IMG_1726.jpg","fPrice":"23.8","fOldPrice":"23.8","fPostage":"免邮费","fRecord":"62","fAddress":"福建漳州","fShopID":"s001","fShopName":"五月田","fDetail":"","fDiscount":"10"},
+{"id":"2","fTitle":"特级初炸橄榄油","fImg":"img/IMG_1728.jpg","fPrice":"38","fOldPrice":"38","fPostage":"免邮费","fRecord":"3","fAddress":"突尼斯","fShopID":"s002","fShopName":"非洲鹰","fDetail":"图文详情","fDiscount":"10"},
+{"id":"3","fTitle":"苏州特产茶叶","fImg":"img/IMG_1722.jpg","fPrice":"258","fOldPrice":"399","fPostage":"免邮费","fRecord":"22","fAddress":"上海","fShopID":"s002","fShopName":"美丽服装店","fDetail":"图文详情","fDiscount":"6.4"},
+{"id":"4","fTitle":"粮油","fImg":"img/IMG_1722.jpg","fPrice":"398","fOldPrice":"700","fPostage":"免邮费","fRecord":"584","fAddress":"上海","fShopID":"s002","fShopName":"美丽服装店","fDetail":"图文详情","fDiscount":"5.7"},
+{"id":"5","fTitle":"休闲食品","fImg":"img/IMG_1723.jpg","fPrice":"128","fOldPrice":"128","fPostage":"免邮费","fRecord":"37","fAddress":"广东广州","fShopID":"s003","fShopName":"欢乐运动店","fDetail":"图文详情","fDiscount":"10"}
+]
