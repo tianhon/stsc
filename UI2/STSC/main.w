@@ -43,7 +43,7 @@
             <div class="x-panel-content  x-scroll-view" xid="content2" _xid="C73498389380000139A529CCB68E13B1"
               style="bottom: 0px;"> 
               <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView"
-                xid="scrollView1"> 
+                xid="scrollView" onPullDown="scrollViewPullDown"> 
                 <div class="x-content-center x-pull-down container" xid="div7"> 
                   <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i5"/>  
                   <span class="x-pull-down-label" xid="span5">下拉刷新...</span> 
@@ -136,7 +136,7 @@
         </div>  
         <div class="x-contents-content" xid="menuContent" onActive="menuContentActive"> 
           <div component="$UI/system/components/justep/windowContainer/windowContainer"
-            class="x-window-container" xid="menuContainer" style="height:100%;width:100%;"/> 
+            class="x-window-container" xid="menuContainer" style="height:100%;width:100%;" autoLoad="false"/> 
         </div>  
         <div class="x-contents-content" xid="storeContent" onActive="storeContentActive"> 
           <div component="$UI/system/components/justep/windowContainer/windowContainer"

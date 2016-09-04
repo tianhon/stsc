@@ -59,38 +59,42 @@ define(function(require) {
 		allData.loadDataFromFile(url, event.source, true);
 		var me = this;
 		var carousel = this.comp("carousel1");
-		event.source.each(function(obj) {
-			var fImgUrl = require.toUrl(obj.row.val("fImgUrl"));
-			var fUrl = require.toUrl(obj.row.val("fUrl"));
-			if (me.comp('contentsImg').getLength() > obj.index) {
-				$(carousel.domNode).find("img").eq(obj.index).attr({
-					"src" : fImgUrl,
-					"pagename" : fUrl
+		event.source
+				.each(function(obj) {
+					var fImgUrl = require.toUrl(obj.row.val("fImgUrl"));
+					var fUrl = require.toUrl(obj.row.val("fUrl"));
+					if (me.comp('contentsImg').getLength() > obj.index) {
+						$(carousel.domNode).find("img").eq(obj.index).attr({
+							"src" : fImgUrl,
+							"pagename" : fUrl
+						});
+						if (obj.index == 0) {
+							localStorage
+									.setItem("index_BannerImg_src", fImgUrl);
+							localStorage.setItem("index_BannerImg_url", fUrl);
+						}
+					} else {
+						carousel
+								.add('<img src="'
+										+ fImgUrl
+										+ '" class="image-wall x-imgBanner" bind-click="openPageClick" pagename="'
+										+ fUrl + '"/>');
+					}
 				});
-				if (obj.index == 0) {
-					localStorage.setItem("index_BannerImg_src", fImgUrl);
-					localStorage.setItem("index_BannerImg_url", fUrl);
-				}
-			} else {
-				carousel.add('<img src="' + fImgUrl + '" class="image-wall x-imgBanner" bind-click="openPageClick" pagename="' + fUrl + '"/>');
-			}
-		});
 	};
 
 	Model.prototype.recommendDataCustomRefresh = function(event) {
 		var url = require.toUrl("./json/TotalData.json");
-		$.ajaxSettings.async = false;
-		$.getJSON(url, function(data) {
-			event.source.loadData(data);
-		})
+		allData.loadDataFromFile(url, event.source, true);
 	};
 
-	Model.prototype.goodsDataCustomRefresh = function(event){
-    var url = require.toUrl("./json/Goods.json");
-		$.ajaxSettings.async = false;
-		$.getJSON(url, function(data) {
-			event.source.loadData(data);
-		})
+	Model.prototype.goodsDataCustomRefresh = function(event) {
+		var url = require.toUrl("./json/Goods.json");
+		allData.loadDataFromFile(url, event.source, true);
+	};
+
+	Model.prototype.scrollViewPullDown = function(event) {
+		this.comp("imgData").refreshData();
 	};
 
 	return Model;
