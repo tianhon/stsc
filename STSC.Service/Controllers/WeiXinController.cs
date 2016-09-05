@@ -227,7 +227,7 @@ namespace STSC.Service.Controllers
             public override IResponseMessageBase OnTextRequest(RequestMessageText requestMessage)
             {
                 var responseMessage = base.CreateResponseMessage<ResponseMessageText>();
-                responseMessage.Content = "OK, got it!"
+                responseMessage.Content = "OK, got it!";
                 return responseMessage;
             }
 
