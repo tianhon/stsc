@@ -1,0 +1,16 @@
+[
+	{
+		"goodsId": "11",
+		"imgUrl": "img/jd1.jpg",
+		"goodsName": "草鸡蛋",
+		"firstClassID": "5",
+		"price": "15"
+	},
+	{
+		"goodsId": "12",
+		"imgUrl": "img/jd2.jpg",
+		"goodsName": "散养鸭蛋",
+		"firstClassID": "5",
+		"price": "15"
+	}
+]

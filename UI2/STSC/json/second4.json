@@ -1,0 +1,23 @@
+[
+	{
+		"goodsId": "8",
+		"imgUrl": "img/goods16.jpeg",
+		"goodsName": "无公害大白菜",
+		"firstClassID": "4",
+		"price": "15"
+	},
+	{
+		"goodsId": "9",
+		"imgUrl": "img/goods17.jpeg",
+		"goodsName": "绿色紫包菜",
+		"firstClassID": "4",
+		"price": "15"
+	},
+	{
+		"goodsId": "10",
+		"imgUrl": "img/goods18.jpeg",
+		"goodsName": "阳澄湖莲子",
+		"firstClassID": "4",
+		"price": "15"
+	}
+]

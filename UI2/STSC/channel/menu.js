@@ -39,17 +39,27 @@ define(function(require) {
 		var rootClassId = this.comp("rootClassData").getValue("firstClassID");
 		var source = this.comp("secondClassData");
 
-		if (rootClassId == "2") {
-			var url = require.toUrl("../json/second2.json");
-			var existRows = source.find([ "firstClassID" ], [ "2" ]);
-			if (existRows.length === 0) {
-				$.ajaxSettings.async = false;
-				$.getJSON(url, function(data) {
-					source.loadData(data, true);
-				})
-			}
+		// 粮 类别不需要重新加载
+		if (rootClassId == "1")
+			return;
+
+		var url = require.toUrl("../json/second" + rootClassId + ".json");
+		var isExist = isClassExist(source, rootClassId);
+		if (!isExist) {
+			$.ajaxSettings.async = false;
+			$.getJSON(url, function(data) {
+				source.loadData(data, true);
+			})
 		}
 	};
+
+	function isClassExist(source, rootClassId) {
+		var existRows = source.find([ "firstClassID" ], [ rootClassId ]);
+		if (existRows.length === 0) {
+			return false;
+		}
+		return true;
+	}
 
 	return Model;
 });

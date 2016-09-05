@@ -14,9 +14,9 @@
 /*一级分类*/
 .list-group{ box-shadow:none;}
 .list-group-item{ background-color:#f5f5f5; border-radius:0; border-color:#e1e1e1;}
-.list-group-item.current{ background-color:#fff; border-right:0; color:#cf0202;}
+.list-group-item.current{ background-color:#32bd60; border-right:0; color:#cf0202;}
 .list-group-item.current h5{ color:#cf0202;}
-.tb-nopadding{ padding-left:0;padding-right:0;}
+.tb-nopadding{ padding: 5px 5px; }
 
 /*二级分类列表*/
 .tb-listBox{ padding-left:0px; padding-right:10px; margin-bottom:10px;}
