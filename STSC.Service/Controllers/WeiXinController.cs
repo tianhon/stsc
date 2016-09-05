@@ -220,6 +220,17 @@ namespace STSC.Service.Controllers
                 return responseMessage;
             }
 
+            /// <summary>
+            /// 处理文字请求
+            /// </summary>
+            /// <returns></returns>
+            public override IResponseMessageBase OnTextRequest(RequestMessageText requestMessage)
+            {
+                var responseMessage = base.CreateResponseMessage<ResponseMessageText>();
+                responseMessage.Content = "OK, got it!"
+                return responseMessage;
+            }
+
         }
 
         public class CustomMessageContext : MessageContext<IRequestMessageBase, IResponseMessageBase>
