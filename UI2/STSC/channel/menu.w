@@ -25,7 +25,7 @@
    <ul class="x-list-template list-group" xid="listTemplateUl1">
     <li xid="li1" class="list-group-item text-center tb-nopadding" bind-css="{'current':$object.val('firstClassID')==$model.rootClassData.val('firstClassID')}">
 <!--     <h5 xid="h51" class="text-black" bind-text='val("className")'><![CDATA[]]></h5> -->
-  <img src="" alt="" xid="image2" class="img-responsive media-object  text-center" bind-attr-src=' val("imgUrl")'></img></li></ul> </div></div>
+  <img src="" alt="" xid="image2" class="img-responsive media-object" bind-attr-src=' val("imgUrl")'></img></li></ul> </div></div>
    <div class="col col-xs-9  x-scroll-view" xid="col5">
   <div class="x-scroll" component="$UI/system/components/justep/scrollView/scrollView" xid="scrollView1" autoPullUp="true" autoAppend="true">
    <div class="x-content-center x-pull-down container" xid="div4">

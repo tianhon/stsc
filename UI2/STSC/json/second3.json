@@ -1,0 +1,16 @@
+[
+	{
+		"goodsId": "6",
+		"imgUrl": "img/goods11.jpeg",
+		"goodsName": "巴城葡萄",
+		"firstClassID": "3",
+		"price": "15"
+	},
+	{
+		"goodsId": "7",
+		"imgUrl": "img/goods12.jpeg",
+		"goodsName": "山东黄桃",
+		"firstClassID": "3",
+		"price": "15"
+	}
+]
