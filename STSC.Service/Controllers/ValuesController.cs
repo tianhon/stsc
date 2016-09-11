@@ -49,7 +49,7 @@ namespace STSC.Service.Controllers
             ImageClass imgC = new ImageClass();
             imgC.id = 1;
             imgC.fImgUrl = "./img/carousel1.jpeg";
-            imgC.fUrl = "./detail.w";
+            imgC.fUrl = a.First().Name;
 
 
             ImageClass imgD = new ImageClass();
