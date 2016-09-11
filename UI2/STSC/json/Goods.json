@@ -3,7 +3,8 @@
 	"imgUrl": "img/goods12.jpeg",
 	"price": "56",
     "type":"G",
-	"title": "黄桃"
+	"title": "黄桃",
+	"detail":"<img src='img/goods12.jpeg' width='100%'/><br/><br/>雪纺印花百褶裙半身裙,简约的线条和版型上身很好看，整体更有看点。时尚真皮女凉鞋 牛筋底中跟欧美潮鞋 2015夏个性森系女鞋子罗马鞋。"
 }, {
 	"id": "2",
 	"imgUrl": "img/goods13.jpeg",

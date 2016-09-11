@@ -97,5 +97,30 @@ define(function(require) {
 		this.comp("imgData").refreshData();
 	};
 
+	Model.prototype.goodsListClick = function(event) {
+		var data = this.comp("goodsData");
+		justep.Shell.showPage("detailed", {
+			goodsID : data.getValue("Id")
+		});
+	};
+
+	Model.prototype.recommendListClick = function(event) {
+		var data = this.comp("goodsData");
+		justep.Shell.showPage("detailed", {
+			goodsID : data.getValue("Id")
+		});
+	};
+
+	Model.prototype.listClick = function(event) {
+		var data = this.comp("goodsData");
+		justep.Shell.showPage("detailed", {
+			goodsID : data.getValue("Id")
+		});
+	};
+
+	Model.prototype.imgCartClick = function(event){
+		alert("");
+	};
+
 	return Model;
 });
