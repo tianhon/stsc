@@ -43,18 +43,18 @@ namespace STSC.Service.Controllers
 
             ImageClass imgC = new ImageClass();
             imgC.id = 1;
-            imgC.fImgUrl = "./img/carouselBox61.jpg";
+            imgC.fImgUrl = "./img/carousel1.jpeg";
             imgC.fUrl = "./detail.w";
 
 
             ImageClass imgD = new ImageClass();
             imgD.id = 2;
-            imgD.fImgUrl = "./img/carouselBox63.jpg";
+            imgD.fImgUrl = "./img/carousel2.jpeg";
             imgD.fUrl = "./detail.w";
 
             ImageClass imgE = new ImageClass();
             imgE.id = 3;
-            imgE.fImgUrl = "./img/carouselBox62.jpg";
+            imgE.fImgUrl = "./img/carousel3.jpeg";
             imgE.fUrl = "./detail.w";
 
             lst.Add(imgC);
