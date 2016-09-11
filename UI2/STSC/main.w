@@ -2,7 +2,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="main13" component="$UI/system/components/justep/window/window"
   design="device:m;" xid="window">  
-  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;top:112px;left:39px;"> 
+  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;top:71px;left:12px;"> 
     <div component="$UI/system/components/justep/data/data" autoLoad="true"
       xid="imgData" onCustomRefresh="imgDataCustomRefresh" idColumn="Id"> 
       <column label="ID" name="Id" type="String" xid="xid1"/>  
@@ -65,46 +65,56 @@
                   </div>  
                   <div component="$UI/system/components/justep/panel/panel"
                     class="panel panel-default x-card" xid="panel2"> 
-                    <div component="$UI/system/components/bootstrap/row/row"
-                      class="row x-menu"> 
-                      <div class="col col-xs-4" xid="col14"> 
-                        <div class="text-center bg-red" bind-click="openPageClick"
-                          pagename="promotion"> 
-                          <h5 class="text-white"><![CDATA[签到]]></h5> 
-                        </div> 
-                      </div>  
-                      <div class="col col-xs-4" xid="col15"> 
-                        <div class="text-center bg-red" xid="div5" bind-click="openPageClick"
-                          pagename="dynamic"> 
-                          <h5 class="text-white" xid="h511"><![CDATA[活动]]></h5> 
-                        </div> 
-                      </div>  
-                      <div class="col col-xs-4" xid="col16"> 
-                        <div class="text-center bg-red" xid="div6" bind-click="openPageClick"
-                          pagename="contactUs"> 
-                          <h5 class="text-white" xid="h512"><![CDATA[百科]]></h5> 
-                        </div> 
-                      </div> 
-                    </div> 
+                    <table class="table tb-menu" component="$UI/system/components/bootstrap/table/table"
+                      xid="table1"> 
+                      <tbody class="x-list-template" xid="listTemplate2"> 
+                        <tr xid="tr1"> 
+                          <td bind-click="openPageClick" pagename="./list.w"
+                            xid="td1"> 
+                            <div class="text-center" xid="div2"> 
+                              <img src="./img/menu_checkin_n.png" alt="" xid="image3"
+                                class="img-responsive center-block tb-img5"/>  
+                              <span xid="span7"><![CDATA[签到]]></span> 
+                            </div> 
+                          </td>  
+                          <td bind-click="openPageClick" pagename="./list.w"
+                            xid="td2"> 
+                            <div class="text-center" xid="div3"> 
+                              <img src="./img/menu_event_01.png" alt="" xid="image1"
+                                class="img-responsive center-block tb-img5"/>  
+                              <span xid="span9"><![CDATA[活动]]></span> 
+                            </div> 
+                          </td>  
+                          <td bind-click="openPageClick" pagename="./list.w"
+                            xid="td3"> 
+                            <div class="text-center" xid="div4"> 
+                              <img src="./img/menu_order_n.png" alt="" xid="image2"
+                                class="img-responsive center-block tb-img5"/>  
+                              <span xid="span10"><![CDATA[百科]]></span> 
+                            </div> 
+                          </td>  
+                          <td bind-click="openPageClick" pagename="./list.w"
+                            xid="td4"> 
+                            <div class="text-center" xid="div7"> 
+                              <img alt="" xid="image8" src="./img/menu_order_n.png"
+                                class="img-responsive center-block tb-img5"/>  
+                              <span xid="span11"><![CDATA[百科]]></span> 
+                            </div> 
+                          </td>  
+                          </tr>  
+                        </tbody> 
+                    </table> 
                   </div>  
                   <div component="$UI/system/components/justep/panel/panel"
                     class="panel panel-default x-card" xid="panel3"> 
                     <div component="$UI/system/components/justep/list/list"
-                      class="x-list" xid="list1" data="recommendData"> 
+                      class="x-list" xid="recommendList" data="recommendData" bind-click="recommendListClick"> 
                       <ul class="x-list-template" xid="listTemplateUl1"> 
                         <li xid="li1"> 
                           <div component="$UI/system/components/bootstrap/row/row"
-                            class="row x-recommended" xid="row2"> 
+                            class="row" xid="row2"> 
                             <div class="col col-xs-12" xid="col4"> 
-                              <div xid="div4"> 
-                                <span xid="span6" class="pull-left text-white x-flex"
-                                  bind-text="&quot;￥&quot; + val(&quot;Price&quot;)"><![CDATA[推荐商品]]></span>  
-                                <span xid="span7" class="pull-left x-flex"><![CDATA[]]></span>  
-                                <span xid="span8" class="x-flex pull-left text-white"
-                                  bind-text="val(&quot;Type&quot;)"/> 
-                              </div>  
-                              <img src="" alt="" xid="image3" bind-attr-src=" val(&quot;imgUrl&quot;)"
-                                class="x-img1"/> 
+                              <img src="" alt="" xid="image3" bind-attr-src=" val(&quot;imgUrl&quot;)" class="img-responsive media-object"/> 
                             </div> 
                           </div> 
                         </li> 
@@ -112,21 +122,26 @@
                     </div> 
                   </div>  
                   <div component="$UI/system/components/justep/panel/panel"
-                    class="panel panel-default x-card" xid="panel4"> 
+                    class="panel panel-default x-card" xid="panel5"> 
                     <h4 xid="h41" class="list-group-item text-black"><![CDATA[为您推荐]]></h4>  
                     <div component="$UI/system/components/justep/list/list"
-                      class="x-list" xid="list4" data="goodsData"> 
-                      <ul class="x-list-template" xid="listTemplateUl2"> 
-                        <li xid="li3" class="col col-xs-6 tb-twoColList">
-                          <div xid="div12"> 
-                            <img src="" alt="" xid="image1" class="img-responsive media-object" bind-attr-src=' val("imgUrl")'/>
-                          <div xid="div10" style="background-color:white;"><span xid="span11" bind-text='val("title")'></span></div><div xid="div13" style="background-color:white;"><span xid="span10" bind-text='"¥" + val("price")' class="text-danger"></span>
-  <a xid="a2" class="pull-right"><![CDATA[+]]></a></div></div>
-                        </li>
+                      class="x-list x-flex" xid="list1" data="goodsData" limit="6"
+                      disablePullToRefresh="false" disableInfiniteLoad="false" bind-click="listClick" style="background-color:#eee;"> 
+                      <ul class="x-list-template" xid="listTemplateUl1"> 
+                        <li xid="li1" class="col col-xs-6 tb-twoColList"> 
+                          <div style="background-color:white;"> 
+                            <img src="" alt="" class="img-rounded img-responsive media-object"
+                              xid="image18" bind-attr-src=' val("imgUrl")'/>  
+                             
+                          <div> 
+                              <span xid="span6" bind-text='ref("title")'><![CDATA[]]></span><div xid="div13"><span xid="span10" bind-text='"¥" + val("price")' class="text-danger"></span>
+  <img src="./img/mallcar.png" alt="" xid="imgCart" class="pull-right imgCart" bind-click="imgCartClick"></img></div>
+  </div></div> 
+                        </li> 
                       </ul> 
-                    </div>
+                    </div> 
                   </div> 
-                </div>  
+                  </div>  
                 <div class="x-content-center x-pull-up" xid="div9"> 
                   <span class="x-pull-up-label" xid="span9">加载更多...</span> 
                 </div> 

@@ -1,5 +1,30 @@
-.x-titlebar{ background-color:#ed4846;}
+.x-titlebar{ background-color:#37ab40;}
 .text-black{ color:#212121;}
 .text-red{ color:#ed4846;}
 
-.x-img1{ width:100%; height:150px;}
+/*去掉了每个card之间的间隔*/
+.x-cards{padding-top:0;}
+
+/*旋转木马*/
+.tb-img{ width:100%;}
+
+.row{ margin:0;}
+
+.tb-text-del{ text-decoration:line-through;}
+.tb-nopadding{ padding-left:0; padding-right:0;}
+
+/*选项卡*/
+.tb-tabs{ padding-bottom:10px; background-color:#efefef;}
+.tb-tabs a.btn { color:#666; background-color:#fff;}
+.tb-tabs .btn.active{ border-bottom:2px solid #ff4400; color:#ff4400;}
+
+.goodsActive{ border-bottom:2px solid #ff4400; color:#ff4400;}
+
+/*底部********************************************************/
+.btn-icon-top span{font-size:12px;}
+.x-panel-bottom { border-top:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3;}
+.x-panel-bottom .btn{ color:#666; padding:3px 0 0 0;}
+.x-panel-bottom .btn:nth-child(2){ border-left:1px solid #dcdcdc; border-right:1px solid #dcdcdc;}
+.tb-shopping .btn{ height:48px; font-size:14px; margin:0; padding:0; border-radius:0; box-shadow:none; border:none; box-sizing:none; background:none; color:#fff;}
+.tb-shopping .btn:first-child{ background-color:#fe9100;}
+.tb-shopping .btn:last-child{ background-color:#fd5001;}

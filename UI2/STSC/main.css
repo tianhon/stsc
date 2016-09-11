@@ -1,18 +1,20 @@
 /* 修改了原来的样式 */
-.x-cards{padding-top:0;}
+.x-cards{padding-top:0px;}
 .panel{ border:0;}
 .panel.panel-default{ margin-bottom:10px;}
-.row{ margin:0;}
-.row .col{ padding:0;}
+.row{ margin:0px;}
+.row .col{ padding-top: 5px;}
 
 /* 压根就没有的样式 */
 .text-black{ color:#212121;}
 .text-white{ color:#fff;}
 
-/*内容*/
-.tb-twoColList.col-xs-6{ padding:5px;}
+/*为您推荐*/
+.tb-twoColList.col-xs-6{ padding: 4px }
+.tb-twoColList.col-xs-6 span{ padding-left: 10px;}
+ .imgCart {padding-right: 10px;}
 
-.bg-red{ background-color:#37ab40;}/*红*/
+.bg-red{ background-color:#37ab40;}
 
 .x-imgBanner{ width:100%; height:150px;}
 .x-img1{ width:100%; height:90px;}
@@ -30,6 +32,12 @@
 /*导航*/
 .x-menu.row .col:nth-child(2){ padding:0 3px;}
 .x-menu.row .col > div{ padding:8px 0 3px 0; }
+
+/*导航栏目*/
+.tb-menu.table > tbody > tr > td{ border:0;}
+.tb-menu.table > tbody > tr > td{ padding-left:0; padding-right:0;}
+.tb-img5{ width:70%;}
+
 /*图片*/
 .x-pic.row .col{ padding:1px;}
 /*推荐*/

@@ -1,0 +1,14 @@
+{
+    "rows": [
+        {
+            "id": "1",
+            "fImgUrl": "../img/goods12.jpeg",
+            "fUrl": "./detail.w"
+        },
+        {
+            "id": "2",
+            "fImgUrl": "../img/goods12.jpeg",
+            "fUrl": "./detail.w"
+        }
+    ]
+}

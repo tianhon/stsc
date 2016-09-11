@@ -3,7 +3,8 @@
 	"imgUrl": "img/goods12.jpeg",
 	"price": "56",
     "type":"G",
-	"title": "黄桃"
+	"title": "蓝霸黄金冠黄桃",
+	"detail":"<img src='img/huangtaoneiye.jpg' width='100%'/>"
 }, {
 	"id": "2",
 	"imgUrl": "img/goods13.jpeg",
