@@ -49,7 +49,7 @@
         <div class="x-contents carousel-inner" role="listbox" component="$UI/system/components/justep/contents/contents"
           active="0" slidable="true" wrap="true" swipe="true" routable="false" xid="contents1"> 
           <div class="x-contents-content" xid="content1"> 
-            <img src="$UI/demo/taobao/main/img/carouselBox61.jpg" alt="" xid="image1"
+            <img alt="" xid="image1"
               class="image-wall tb-img"/> 
           </div> 
         </div> 
