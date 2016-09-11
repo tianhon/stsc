@@ -17,6 +17,7 @@
 !*.md
 !*.gitattributes
 !*.sln
+!*.sql
 
 
 ## Ignore Visual Studio temporary files, build results, and
