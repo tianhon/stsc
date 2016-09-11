@@ -39,7 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="Senparc.Weixin">
       <HintPath>..\packages\Senparc.Weixin.4.7.5\lib\net45\Senparc.Weixin.dll</HintPath>
     </Reference>
@@ -49,6 +56,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -159,6 +167,72 @@
     <Compile Include="Controllers\HttpGet.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\WeiXinController.cs" />
+    <Compile Include="DA\article.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\cart.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\classification.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\even.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\event_user.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\good.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\goods_comment.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\goods_img.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\order.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\order_detail.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\recommendation.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\store.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\store_user.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\STSCModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STSCModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\STSCModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\STSCModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STSCModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DA\user.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\user_address.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\user_favorite.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DA\user_points.cs">
+      <DependentUpon>STSCModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,13 +266,32 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <EntityDeploy Include="DA\STSCModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>STSCModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DA\STSCModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>STSCModel.edmx</DependentUpon>
+      <LastGenOutput>STSCModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DA\STSCModel.edmx.diagram">
+      <DependentUpon>STSCModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DA\STSCModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>STSCModel.edmx</DependentUpon>
+      <LastGenOutput>STSCModel.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -215,7 +308,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
