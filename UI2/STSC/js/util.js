@@ -106,7 +106,7 @@ define(function(require) {
 			return deferred.promise();
 		},
 	   customUrl: function(url,para){
-		   var preUrl="http://localhost/STSC.Service/api";
+		   var preUrl="http://stsc.azurewebsites.net/api";
 		   var customUrl="";
 		   if(url==null||url==""||this.length==0||url.length>this.length)  
 			   customUrl= preUrl;  
