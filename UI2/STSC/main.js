@@ -2,7 +2,8 @@ define(function(require) {
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var allData = require("./js/loadData");
-
+	var restfulUtil = require("./js/util");
+	
 	var Model = function() {
 		this.callParent();
 	};
@@ -55,8 +56,26 @@ define(function(require) {
 		 * 1、加载轮换图片数据 2、根据data数据动态添加carouse组件中的content页面 3、如果img已经创建了，只修改属性
 		 * 4、第一张图片信息存入localStorage
 		 */
-		var url = require.toUrl("./json/imgData.json");
-		allData.loadDataFromFile(url, event.source, true);
+
+		//var url = require.toUrl("./json/imgData.json");
+		//allData.loadDataFromFile(url, event.source, true);
+		//var url="http://localhost/STSC.Service/api/values/GetImg";
+   
+		var url=restfulUtil.customUrl("values/GetImg");
+		$.ajax({
+			type : "GET",
+			dataType : "json",
+			async: false,
+			url : url,
+			//data : option.param,
+			success : function(data) {
+                event.source.loadData(data);
+			},
+		    error : function(){
+		    	alert("error");
+		    }
+			});
+		
 		var me = this;
 		var carousel = this.comp("carousel1");
 		event.source

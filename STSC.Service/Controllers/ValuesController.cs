@@ -35,5 +35,41 @@ namespace STSC.Service.Controllers
         public void Delete(int id)
         {
         }
+
+        [HttpGet]
+        public List<ImageClass> GetImg()
+        {
+            List<ImageClass> lst = new List<ImageClass>();
+
+            ImageClass imgC = new ImageClass();
+            imgC.id = 1;
+            imgC.fImgUrl = "./img/carouselBox61.jpg";
+            imgC.fUrl = "./detail.w";
+
+
+            ImageClass imgD = new ImageClass();
+            imgD.id = 2;
+            imgD.fImgUrl = "./img/carouselBox63.jpg";
+            imgD.fUrl = "./detail.w";
+
+            ImageClass imgE = new ImageClass();
+            imgE.id = 3;
+            imgE.fImgUrl = "./img/carouselBox62.jpg";
+            imgE.fUrl = "./detail.w";
+
+            lst.Add(imgC);
+            lst.Add(imgD);
+            lst.Add(imgE);
+            return lst;
+
+        }
+    }
+
+    public class ImageClass
+    {
+        public int id { get; set; }
+        public string fImgUrl { get; set; }
+
+        public string fUrl { get; set; }
     }
 }
