@@ -39,6 +39,11 @@ namespace STSC.Service.Controllers
         [HttpGet]
         public List<ImageClass> GetImg()
         {
+            STSC.Service.DA.STSCEntities entity = new DA.STSCEntities();
+
+            var a= entity.classifications.ToList();
+
+
             List<ImageClass> lst = new List<ImageClass>();
 
             ImageClass imgC = new ImageClass();
