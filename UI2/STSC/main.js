@@ -57,24 +57,24 @@ define(function(require) {
 		 * 4、第一张图片信息存入localStorage
 		 */
 
-		//var url = require.toUrl("./json/imgData.json");
-		//allData.loadDataFromFile(url, event.source, true);
-		//var url="http://localhost/STSC.Service/api/values/GetImg";
+		var url = require.toUrl("./json/imgData.json");
+		allData.loadDataFromFile(url, event.source, true);
    
-		var url=restfulUtil.customUrl("values/GetImg");
-		$.ajax({
-			type : "GET",
-			dataType : "json",
-			async: false,
-			url : url,
-			//data : option.param,
-			success : function(data) {
-                event.source.loadData(data);
-			},
-		    error : function(){
-		    	alert("error");
-		    }
-			});
+		//var url="http://localhost/STSC.Service/api/values/GetImg";
+//		var url=restfulUtil.customUrl("values/GetImg");
+//		$.ajax({
+//			type : "GET",
+//			dataType : "json",
+//			async: false,
+//			url : url,
+//			//data : option.param,
+//			success : function(data) {
+//                event.source.loadData(data);
+//			},
+//		    error : function(){
+//		    	alert("error");
+//		    }
+//			});
 		
 		var me = this;
 		var carousel = this.comp("carousel1");
