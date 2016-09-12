@@ -48,7 +48,9 @@ define(function(require) {
 		allData.loadDataFromFile(url, event.source, true);
 	};
 	
+	Model.prototype.btnAddCartClick = function(event){
+		
+	};
 	
-
 	return Model;
 });

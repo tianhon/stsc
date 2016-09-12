@@ -103,7 +103,7 @@
           <div component="$UI/system/components/justep/button/buttonGroup"
             class="btn-group btn-group-justified tb-shopping " tabbed="true" xid="buttonGroup2"> 
             <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label"
-              label="加入购物车" xid="button3"> 
+              label="加入购物车" xid="btnAddCart" onClick="btnAddCartClick"> 
               <i xid="i3"/>  
               <span xid="span3">加入购物车</span> 
             </a>  
