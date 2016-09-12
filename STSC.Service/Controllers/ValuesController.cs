@@ -39,12 +39,17 @@ namespace STSC.Service.Controllers
         [HttpGet]
         public List<ImageClass> GetImg()
         {
+            STSC.Service.DA.STSCEntities entity = new DA.STSCEntities();
+
+            var a= entity.classifications.ToList();
+
+
             List<ImageClass> lst = new List<ImageClass>();
 
             ImageClass imgC = new ImageClass();
             imgC.id = 1;
             imgC.fImgUrl = "./img/carousel1.jpeg";
-            imgC.fUrl = "./detail.w";
+            imgC.fUrl = a.First().Name;
 
 
             ImageClass imgD = new ImageClass();
