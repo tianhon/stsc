@@ -5,11 +5,15 @@ define(function(require) {
 
 	var Model = function() {
 		this.callParent();
+		this.isBack;
 	};
 
 	// 返回上一页
 	Model.prototype.backBtnClick = function(event) {
 		justep.Shell.closePage();
+		setTimeout(function() {
+			justep.Shell.fireEvent("onRestoreContent", {});
+		}, 500);
 	};
 
 	Model.prototype.getImageUrl = function(row) {
@@ -24,81 +28,87 @@ define(function(require) {
 		});
 	};
 
-	Model.prototype.shopDataCustomRefresh = function(event){
+	Model.prototype.shopDataCustomRefresh = function(event) {
 		/*
-		1、加载店铺数据
+		 * 1、加载店铺数据
 		 */
 		var url = require.toUrl("../json/CartShops.json");
 		allData.loadDataFromFile(url, event.source, true);
 	};
 
-	Model.prototype.goodsDataCustomRefresh = function(event){
-	    var url = require.toUrl("../json/CartGoodsData.json");
+	Model.prototype.goodsDataCustomRefresh = function(event) {
+		var url = require.toUrl("../json/CartGoodsData.json");
 		allData.loadDataFromFile(url, event.source, true);
 	};
 
-	Model.prototype.reductionBtnClick = function(event){
+	Model.prototype.reductionBtnClick = function(event) {
 		/*
-		1、减少数量按钮绑定点击事件onClick()
-		2、点击按钮，当前记录的fNumber值减1
-		3、fNumber为1时不再相减
-		*/
+		 * 1、减少数量按钮绑定点击事件onClick() 2、点击按钮，当前记录的fNumber值减1 3、fNumber为1时不再相减
+		 */
 		var row = event.bindingContext.$object;
-		var n=row.val("fNumber");
-		if(n===undefined){n=1;}
-		if(n>1){
-			row.val("fNumber",n-1);
+		var n = row.val("fNumber");
+		if (n === undefined) {
+			n = 1;
+		}
+		if (n > 1) {
+			row.val("fNumber", n - 1);
 		}
 	};
 
-	Model.prototype.addBtnClick = function(event){
+	Model.prototype.addBtnClick = function(event) {
 		/*
-		1、增加数量按钮绑定点击事件onClick()
-		2、点击按钮，当前记录的fNumber值加1
-		*/
+		 * 1、增加数量按钮绑定点击事件onClick() 2、点击按钮，当前记录的fNumber值加1
+		 */
 		var row = event.bindingContext.$object;
-		var n=row.val("fNumber");
-		if(n===undefined){n=1;}
-		row.val("fNumber",n+1);
+		var n = row.val("fNumber");
+		if (n === undefined) {
+			n = 1;
+		}
+		row.val("fNumber", n + 1);
 	};
 
-	Model.prototype.allChooseChange = function(event){
+	Model.prototype.allChooseChange = function(event) {
 		/*
-		1、全选多选框绑定变化事件onChange()
-		2、点击全选多选框按钮，获取其值
-		3、修改商品表中的fChoose字段为全选多选框按钮的值
-		*/
+		 * 1、全选多选框绑定变化事件onChange() 2、点击全选多选框按钮，获取其值 3、修改商品表中的fChoose字段为全选多选框按钮的值
+		 */
 		var goodsData = this.comp("goodsData");
-		var choose=this.comp("allChoose").val();
-		goodsData.each(function(obj){
-			if(choose){				
-				goodsData.setValue("fChoose","1",obj.row);
+		var choose = this.comp("allChoose").val();
+		goodsData.each(function(obj) {
+			if (choose) {
+				goodsData.setValue("fChoose", "1", obj.row);
 			} else {
-				goodsData.setValue("fChoose","",obj.row);
-			}	
+				goodsData.setValue("fChoose", "", obj.row);
+			}
 		});
 	};
 
-	Model.prototype.delBtnClick = function(event){
+	Model.prototype.delBtnClick = function(event) {
 		/*
-		1、删除按钮点击事件
-		2、删除选中商品
-		3、如果商店里已经没有商品，则删除商店
-		*/
+		 * 1、删除按钮点击事件 2、删除选中商品 3、如果商店里已经没有商品，则删除商店
+		 */
 		var goodsData = this.comp("goodsData");
-		var goodsRows = goodsData.find(["fChoose"],["1"]);
+		var goodsRows = goodsData.find([ "fChoose" ], [ "1" ]);
 		goodsData.deleteData(goodsRows);
-  
+
 		var shopData = this.comp("shopsData");
 		var shopRows = new Array();
-		shopData.each(function(obj){
-			var n = goodsData.find(["fShopID"],[obj.row.val("id")]).length; 
-			if(n == 0){
+		shopData.each(function(obj) {
+			var n = goodsData.find([ "fShopID" ], [ obj.row.val("id") ]).length;
+			if (n == 0) {
 				shopRows.push(obj.row);
 			}
-		}); 
-		shopData.confirmDelete = false;   
-		shopData.deleteData(shopRows); 
+		});
+		shopData.confirmDelete = false;
+		shopData.deleteData(shopRows);
+	};
+
+	// 控制返回上一页按钮是否显示方法，由首页来调用
+	Model.prototype.showBackBtn = function(isBack) {
+
+		// 根据参数修改calculateData
+		this.isBack = isBack;
+		var v = isBack ? 1 : 0;
+		this.comp("calculateData").setValue("isBack", v);
 	};
 
 	return Model;

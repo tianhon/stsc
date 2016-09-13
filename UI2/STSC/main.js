@@ -3,9 +3,12 @@ define(function(require) {
 	var justep = require("$UI/system/lib/justep");
 	var allData = require("./js/loadData");
 	var restfulUtil = require("./js/util");
-	
+
 	var Model = function() {
 		this.callParent();
+
+		// 定义全局变量
+		this.lastContentXid = "homeContent";
 	};
 
 	// 图片路径转换
@@ -13,14 +16,25 @@ define(function(require) {
 		return require.toUrl(url);
 	};
 
-	// 菜单
+	// 分类页面激活事件
 	Model.prototype.menuContentActive = function(event) {
 		this.loadContainer("menuContainer", "channel/menu.w");
 	};
-	// 商家
+
+	// 购物车页面激活事件
 	Model.prototype.storeContentActive = function(event) {
 		this.loadContainer("storeContainer", "channel/store.w");
 	};
+
+	// 购物车页面离开事件
+	Model.prototype.storeContentInactive = function(event) {
+		// 1、获取子页面Model 2、调用子页面的函数showBackBtn，设置返回按钮显否显示
+		var model = this.comp("storeContainer").getInnerModel();
+		if (model) {
+			model.showBackBtn(false);
+		}
+	};
+
 	// 关于
 	Model.prototype.aboutContentActive = function(event) {
 		this.loadContainer("aboutContainer", "channel/about.w");
@@ -59,47 +73,41 @@ define(function(require) {
 
 		var url = require.toUrl("./json/imgData.json");
 		allData.loadDataFromFile(url, event.source, true);
-   
-		//var url="http://localhost/STSC.Service/api/values/GetImg";
-//		var url=restfulUtil.customUrl("values/GetImg");
-//		$.ajax({
-//			type : "GET",
-//			dataType : "json",
-//			async: false,
-//			url : url,
-//			//data : option.param,
-//			success : function(data) {
-//                event.source.loadData(data);
-//			},
-//		    error : function(){
-//		    	alert("error");
-//		    }
-//			});
-		
+
+		// var url="http://localhost/STSC.Service/api/values/GetImg";
+		// var url=restfulUtil.customUrl("values/GetImg");
+		// $.ajax({
+		// type : "GET",
+		// dataType : "json",
+		// async: false,
+		// url : url,
+		// //data : option.param,
+		// success : function(data) {
+		// event.source.loadData(data);
+		// },
+		// error : function(){
+		// alert("error");
+		// }
+		// });
+
 		var me = this;
 		var carousel = this.comp("carousel1");
-		event.source
-				.each(function(obj) {
-					var fImgUrl = require.toUrl(obj.row.val("fImgUrl"));
-					var fUrl = require.toUrl(obj.row.val("fUrl"));
-					if (me.comp('contentsImg').getLength() > obj.index) {
-						$(carousel.domNode).find("img").eq(obj.index).attr({
-							"src" : fImgUrl,
-							"pagename" : fUrl
-						});
-						if (obj.index == 0) {
-							localStorage
-									.setItem("index_BannerImg_src", fImgUrl);
-							localStorage.setItem("index_BannerImg_url", fUrl);
-						}
-					} else {
-						carousel
-								.add('<img src="'
-										+ fImgUrl
-										+ '" class="image-wall x-imgBanner" bind-click="openPageClick" pagename="'
-										+ fUrl + '"/>');
-					}
+		event.source.each(function(obj) {
+			var fImgUrl = require.toUrl(obj.row.val("fImgUrl"));
+			var fUrl = require.toUrl(obj.row.val("fUrl"));
+			if (me.comp('contentsImg').getLength() > obj.index) {
+				$(carousel.domNode).find("img").eq(obj.index).attr({
+					"src" : fImgUrl,
+					"pagename" : fUrl
 				});
+				if (obj.index == 0) {
+					localStorage.setItem("index_BannerImg_src", fImgUrl);
+					localStorage.setItem("index_BannerImg_url", fUrl);
+				}
+			} else {
+				carousel.add('<img src="' + fImgUrl + '" class="image-wall x-imgBanner" bind-click="openPageClick" pagename="' + fUrl + '"/>');
+			}
+		});
 	};
 
 	Model.prototype.recommendDataCustomRefresh = function(event) {
@@ -116,13 +124,6 @@ define(function(require) {
 		this.comp("imgData").refreshData();
 	};
 
-	Model.prototype.goodsListClick = function(event) {
-		var data = this.comp("goodsData");
-		justep.Shell.showPage("detailed", {
-			goodsID : data.getValue("Id")
-		});
-	};
-
 	Model.prototype.recommendListClick = function(event) {
 		var data = this.comp("goodsData");
 		justep.Shell.showPage("detailed", {
@@ -137,8 +138,51 @@ define(function(require) {
 		});
 	};
 
-	Model.prototype.imgCartClick = function(event){
+	Model.prototype.imgCartClick = function(event) {
 		alert("");
+	};
+
+	// 添加事件
+	Model.prototype.modelLoad = function(event) {
+		justep.Shell.on("onRestoreContent", this.onRestoreContent, this);
+		justep.Shell.on("onStoreContent", this.onStoreContent, this);
+		justep.Shell.on("onHomeContent", this.onHomeContent, this);
+		justep.Shell.on("onChangeCartTotalCount", this.onChangeCartTotalCount, this);
+	};
+
+	// 卸载事件
+	Model.prototype.modelUnLoad = function(event) {
+		justep.Shell.off("onRestoreContent", this.onRestoreContent);
+		justep.Shell.off("onStoreContent", this.onStoreContent);
+		justep.Shell.off("onHomeContent", this.onHomeContent);
+		justep.Shell.off("onChangeCartTotalCount", this.onChangeCartTotalCount, this);
+	};
+
+	// 返回上一次的content
+	Model.prototype.onRestoreContent = function(event) {
+		this.comp("contents2").to(this.lastContentXid);
+	};
+
+	// 记住当前content，切换到购物车页
+	Model.prototype.onStoreContent = function(event) {
+		this.lastContentXid = this.comp("contents2").getActiveXid();
+		this.comp("contents2").to("storeContent");
+		var storeModel = this.comp("storeContainer").getInnerModel();
+		if (storeModel) {
+			storeModel.showBackBtn(true);
+		}
+	};
+
+	// 切换到首页
+	Model.prototype.onHomeContent = function(event) {
+		this.comp("contents2").to("homeContent");
+	};
+
+	// 更改购物车商品总数事件
+	Model.prototype.onChangeCartTotalCount = function(event) {
+		var totalCount = this.comp("globalData").getValue("cartTotalCount");
+		totalCount++;
+		this.comp("globalData").setValue("cartTotalCount", totalCount);
 	};
 
 	return Model;

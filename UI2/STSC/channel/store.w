@@ -30,10 +30,11 @@
      <expr xid="default5">$model.goodsData.sum('fSum')</expr></calculate> </col> 
    <col name="allNumber" xid="ruleCol3">
     <calculate xid="calculate3">
-     <expr xid="default6">$model.goodsData.sum(&quot;fChoose&quot;)</expr></calculate> </col> </rule></div></div>  
+     <expr xid="default6">$model.goodsData.sum(&quot;fChoose&quot;)</expr></calculate> </col> </rule>
+  <data xid="default7">[{&quot;allSum&quot;:&quot;0&quot;,&quot;isBack&quot;:&quot;0&quot;}]</data></div></div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full x-card"> 
     <div class="x-panel-top" xid="top1"><div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar" xid="titleBar1">
-   <div class="x-titlebar-left" xid="left1"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" label="button" xid="button1" icon="icon-chevron-left">
+   <div class="x-titlebar-left" xid="left1"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" label="button" xid="backBtn" icon="icon-chevron-left" bind-visible='$model.calculateData.val("isBack")==1' onClick="backBtnClick">
    <i xid="i1" class="icon-chevron-left"></i>
    <span xid="span1"></span></a>
   </div>

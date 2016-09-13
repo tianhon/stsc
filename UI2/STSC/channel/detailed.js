@@ -48,7 +48,25 @@ define(function(require) {
 		allData.loadDataFromFile(url, event.source, true);
 	};
 	
-	
+	//点击加入购物车按钮，调用fireEvent 将全局的购物车商品总数加1
+	Model.prototype.btnAddCartClick = function(event){
+//		var key ="Cart.TempData";
+//		var value = { goodId: "1", shopId: "2" };
+//		localStorage.setItem(key, JSON.stringify(value));
+//		
+//		var storage = localStorage.getItem(key);
+//		var data= JSON.parse(storage);
+//		alert(data["goodId"]);
 
+		justep.Shell.fireEvent("onChangeCartTotalCount",{});
+	};
+	
+	
+	//跳转购物车页面
+	Model.prototype.btnCartClick = function(event){
+		justep.Shell.fireEvent("onStoreContent",{});
+		justep.Shell.showMainPage();
+	};
+	
 	return Model;
 });

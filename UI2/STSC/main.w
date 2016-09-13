@@ -2,7 +2,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="main13" component="$UI/system/components/justep/window/window"
   design="device:m;" xid="window">  
-  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;top:71px;left:12px;"> 
+  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;top:71px;left:12px;" onLoad="modelLoad" onunLoad="modelUnLoad"> 
     <div component="$UI/system/components/justep/data/data" autoLoad="true"
       xid="imgData" onCustomRefresh="imgDataCustomRefresh" idColumn="Id"> 
       <column label="ID" name="Id" type="String" xid="xid1"/>  
@@ -24,6 +24,11 @@
       <column label="类型" name="type" type="String" xid="xid11"/>  
       <column label="标题" name="title" type="String" xid="xid12"/> 
     </div> 
+    <div component="$UI/system/components/justep/data/data" autoLoad="true"
+      xid="globalData" idColumn="cartTotalCount">
+      <column label="购物车商品总数" name="cartTotalCount" type="Integer" xid="xid14"/>  
+      <data xid="default1">[{"cartTotalCount":0}]</data>
+    </div>
   </div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full"> 
     <div class="x-panel-content x-bg-img"> 
@@ -153,7 +158,7 @@
           <div component="$UI/system/components/justep/windowContainer/windowContainer"
             class="x-window-container" xid="menuContainer" style="height:100%;width:100%;" autoLoad="false"/> 
         </div>  
-        <div class="x-contents-content" xid="storeContent" onActive="storeContentActive"> 
+        <div class="x-contents-content" xid="storeContent" onActive="storeContentActive" onInactive="storeContentInactive"> 
           <div component="$UI/system/components/justep/windowContainer/windowContainer"
             class="x-window-container" xid="storeContainer" style="height:100%;width:100%;"/> 
         </div>
@@ -179,7 +184,7 @@
         <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top"
           label="购物车" xid="storeBtn" icon="icon-ios7-cart" target="storeContent"> 
           <i xid="i3" class="icon-ios7-cart"/>  
-          <span xid="span3">购物车</span> 
+          <span xid="span3" bind-text='"购物车(" +  $model.globalData.val("cartTotalCount") + ")"'><![CDATA[]]></span> 
         </a>  
         <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top"
           label="我的" xid="aboutBtn" icon="icon-ios7-person" target="aboutContent"> 

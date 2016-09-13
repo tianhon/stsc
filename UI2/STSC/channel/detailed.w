@@ -15,7 +15,7 @@
       <column label="价格" name="price" type="String" xid="xid10"/>  
       <column label="类型" name="type" type="String" xid="xid11"/>  
       <column label="标题" name="title" type="String" xid="xid12"/>  
-      <column label="商品详情" name="detail" type="String" xid="xid7"/>
+      <column label="商品详情" name="detail" type="String" xid="xid7"/> 
     </div>  
     <div component="$UI/system/components/justep/data/data" autoLoad="true"
       xid="customerReviewData" idColumn="id" onCustomRefresh="customerReviewDataCustomRefresh"> 
@@ -24,7 +24,7 @@
       <column label="评分" name="fScore" type="Float" xid="xid5"/>  
       <column label="评论内容" name="fContent" type="String" xid="xid6"/>  
       <column label="评论日期" name="fDate" type="Date" xid="xid8"/> 
-    </div> 
+    </div>
   </div>  
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-card x-full x-has-iosstatusbar"> 
     <div class="x-panel-top"> 
@@ -49,8 +49,7 @@
         <div class="x-contents carousel-inner" role="listbox" component="$UI/system/components/justep/contents/contents"
           active="0" slidable="true" wrap="true" swipe="true" routable="false" xid="contents1"> 
           <div class="x-contents-content" xid="content1"> 
-            <img alt="" xid="image1"
-              class="image-wall tb-img"/> 
+            <img alt="" xid="image1" class="image-wall tb-img"/> 
           </div> 
         </div> 
       </div>  
@@ -78,8 +77,9 @@
         </div> 
       </div>  
       <div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card panel-body"> 
-        <h4 xid="h42" class="text-black goodsActive"><![CDATA[图文详情]]></h4><div bind-html=" $model.goodsData.val(&quot;detail&quot;)"/>
-      </div>
+        <h4 xid="h42" class="text-black goodsActive"><![CDATA[图文详情]]></h4>
+        <div bind-html=" $model.goodsData.val(&quot;detail&quot;)"/> 
+      </div> 
     </div>  
     <div class="x-panel-bottom" xid="bottom1"> 
       <div component="$UI/system/components/bootstrap/row/row" class="row"
@@ -88,12 +88,12 @@
           <div component="$UI/system/components/justep/button/buttonGroup"
             class="btn-group btn-group-justified" tabbed="true" xid="buttonGroup1"> 
             <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top"
-              label="购物车" xid="button1" icon="icon-ios7-cart"> 
+              label="购物车" xid="btnCart" icon="icon-ios7-cart" onClick="btnCartClick"> 
               <i xid="i1" class="icon-ios7-cart"/>  
               <span xid="span1">购物车</span> 
             </a>  
             <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top"
-              label="收藏" xid="button2" icon="icon-ios7-heart-outline"> 
+              label="收藏" xid="btnFavorite" icon="icon-ios7-heart-outline"> 
               <i xid="i2" class="icon-ios7-heart-outline"/>  
               <span xid="span2">收藏</span> 
             </a> 
@@ -103,7 +103,7 @@
           <div component="$UI/system/components/justep/button/buttonGroup"
             class="btn-group btn-group-justified tb-shopping " tabbed="true" xid="buttonGroup2"> 
             <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label"
-              label="加入购物车" xid="button3"> 
+              label="加入购物车" xid="btnAddCart" onClick="btnAddCartClick"> 
               <i xid="i3"/>  
               <span xid="span3">加入购物车</span> 
             </a>  
