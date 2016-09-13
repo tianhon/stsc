@@ -1,18 +1,25 @@
-﻿using System;
+﻿using STSC.Service.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using STSC.Service.Models;
 
 namespace STSC.Service.Controllers
 {
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
+            using (var context = new STSCContext())
+            {
+                context.Classifications.Add(new Classification { Path = "fsdf", Name = "Hello" });
+                context.SaveChanges();
+                return "Hello: "+ context.Classifications.Count().ToString();
+            }
         }
 
         // GET api/values/5
@@ -39,9 +46,9 @@ namespace STSC.Service.Controllers
         [HttpGet]
         public List<ImageClass> GetImg()
         {
-            STSC.Service.DA.STSCEntities entity = new DA.STSCEntities();
+            //STSC.Service.DA.STSCEntities entity = new DA.STSCEntities();
 
-            var a= entity.classifications.ToList();
+            //var a= entity.classifications.ToList();
 
 
             List<ImageClass> lst = new List<ImageClass>();
@@ -49,7 +56,7 @@ namespace STSC.Service.Controllers
             ImageClass imgC = new ImageClass();
             imgC.id = 1;
             imgC.fImgUrl = "./img/carousel1.jpeg";
-            imgC.fUrl = a.First().Name;
+            imgC.fUrl = "./detail.w";
 
 
             ImageClass imgD = new ImageClass();
