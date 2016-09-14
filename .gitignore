@@ -13,11 +13,13 @@
 /UI2/STSC/.cache/*
 /UI2/STSC/.release/*
 
-!*.gitignore
-!*.md
-!*.gitattributes
-!*.sln
-!*.sql
+!/*.gitignore
+!/*.md
+!/*.gitattributes
+!/*.sln
+!/*.sql
+!/*.deployment
+!/*.cmd
 
 
 ## Ignore Visual Studio temporary files, build results, and
