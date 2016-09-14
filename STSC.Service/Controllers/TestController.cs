@@ -9,7 +9,7 @@ using STSC.Service.Models;
 
 namespace STSC.Service.Controllers
 {
-    public class ValuesController : ApiController
+    public class TestController : ApiController
     {
         // GET api/values
         public string Get()

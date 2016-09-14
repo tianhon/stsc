@@ -15,7 +15,7 @@ namespace STSC.Service.Models
         public virtual DbSet<Article> Articles { get; set; }
         public virtual DbSet<Cart> Carts { get; set; }
         public virtual DbSet<Classification> Classifications { get; set; }
-        public virtual DbSet<Even> Evens { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<EventUser> EventUsers { get; set; }
         public virtual DbSet<Goods> Goods { get; set; }
         public virtual DbSet<GoodsComment> GoodsComments { get; set; }
@@ -76,27 +76,27 @@ namespace STSC.Service.Models
                 .Property(e => e.Path)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Even>()
+            modelBuilder.Entity<Event>()
                 .Property(e => e.Name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Even>()
+            modelBuilder.Entity<Event>()
                 .Property(e => e.ThumbImg)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Even>()
+            modelBuilder.Entity<Event>()
                 .Property(e => e.BannerImg)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Even>()
+            modelBuilder.Entity<Event>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Even>()
+            modelBuilder.Entity<Event>()
                 .Property(e => e.HomeUrl)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Even>()
+            modelBuilder.Entity<Event>()
                 .Property(e => e.Param)
                 .IsUnicode(false);
 

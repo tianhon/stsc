@@ -6,8 +6,8 @@ namespace STSC.Service.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("even")]
-    public partial class Even
+    [Table("event")]
+    public partial class Event
     {
         public int Id { get; set; }
 

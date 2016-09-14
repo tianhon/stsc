@@ -10,7 +10,7 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping structure for table stsc2.article
+-- Dumping structure for table stsc.article
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE IF NOT EXISTS `article` (
   `Id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `article` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.cart
+-- Dumping structure for table stsc.cart
 DROP TABLE IF EXISTS `cart`;
 CREATE TABLE IF NOT EXISTS `cart` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `cart` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.classification
+-- Dumping structure for table stsc.classification
 DROP TABLE IF EXISTS `classification`;
 CREATE TABLE IF NOT EXISTS `classification` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -57,9 +57,9 @@ CREATE TABLE IF NOT EXISTS `classification` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.even
-DROP TABLE IF EXISTS `even`;
-CREATE TABLE IF NOT EXISTS `even` (
+-- Dumping structure for table stsc.event
+DROP TABLE IF EXISTS `event`;
+CREATE TABLE IF NOT EXISTS `event` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(200) NOT NULL COMMENT '活动名称',
   `ThumbImg` varchar(100) DEFAULT NULL COMMENT '缩略图路径',
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `even` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.event_user
+-- Dumping structure for table stsc.event_user
 DROP TABLE IF EXISTS `event_user`;
 CREATE TABLE IF NOT EXISTS `event_user` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `event_user` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.goods
+-- Dumping structure for table stsc.goods
 DROP TABLE IF EXISTS `goods`;
 CREATE TABLE IF NOT EXISTS `goods` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `goods` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.goods_comment
+-- Dumping structure for table stsc.goods_comment
 DROP TABLE IF EXISTS `goods_comment`;
 CREATE TABLE IF NOT EXISTS `goods_comment` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `goods_comment` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.goods_img
+-- Dumping structure for table stsc.goods_img
 DROP TABLE IF EXISTS `goods_img`;
 CREATE TABLE IF NOT EXISTS `goods_img` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `goods_img` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.order
+-- Dumping structure for table stsc.order
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE IF NOT EXISTS `order` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `order` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.order_detail
+-- Dumping structure for table stsc.order_detail
 DROP TABLE IF EXISTS `order_detail`;
 CREATE TABLE IF NOT EXISTS `order_detail` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `order_detail` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.recommendation
+-- Dumping structure for table stsc.recommendation
 DROP TABLE IF EXISTS `recommendation`;
 CREATE TABLE IF NOT EXISTS `recommendation` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `recommendation` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.store
+-- Dumping structure for table stsc.store
 DROP TABLE IF EXISTS `store`;
 CREATE TABLE IF NOT EXISTS `store` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `store` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.store_user
+-- Dumping structure for table stsc.store_user
 DROP TABLE IF EXISTS `store_user`;
 CREATE TABLE IF NOT EXISTS `store_user` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `store_user` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.user
+-- Dumping structure for table stsc.user
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `Id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -257,7 +257,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.user_address
+-- Dumping structure for table stsc.user_address
 DROP TABLE IF EXISTS `user_address`;
 CREATE TABLE IF NOT EXISTS `user_address` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -275,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `user_address` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.user_favorite
+-- Dumping structure for table stsc.user_favorite
 DROP TABLE IF EXISTS `user_favorite`;
 CREATE TABLE IF NOT EXISTS `user_favorite` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -292,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `user_favorite` (
 -- Data exporting was unselected.
 
 
--- Dumping structure for table stsc2.user_points
+-- Dumping structure for table stsc.user_points
 DROP TABLE IF EXISTS `user_points`;
 CREATE TABLE IF NOT EXISTS `user_points` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
