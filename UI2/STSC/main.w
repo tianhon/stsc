@@ -160,8 +160,7 @@
         </div>  
         <div class="x-contents-content" xid="storeContent" onActive="storeContentActive" onInactive="storeContentInactive"> 
           <div component="$UI/system/components/justep/windowContainer/windowContainer"
-            class="x-window-container" xid="storeContainer" style="height:100%;width:100%;"/> 
-        </div>
+            class="x-window-container" xid="storeContainer" style="height:100%;width:100%;"/></div>
         <div class="x-contents-content" xid="aboutContent" onActive="aboutContentActive"> 
           <div component="$UI/system/components/justep/windowContainer/windowContainer"
             class="x-window-container" xid="aboutContainer" style="height:100%;width:100%;"/> 
